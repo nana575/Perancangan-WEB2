@@ -14,10 +14,10 @@
     Bil II : <?php echo $bil2?>
     <br>
     <?php
-    if ($bil1<$bil) {
+    if ($bil1<$bil2) {
         echo "$bil1 lebih kecil dari $bil2";
     }
-    elseif ($bil1>$bil2) {
+    else if ($bil1>$bil2) {
         echo "$bil1 lebih besar dari $bil2";
     }
     else{
