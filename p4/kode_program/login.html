@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Login</title>
+    
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+
+        <!-- Tampilkan error jika ada -->
+        <?php if (isset($_GET['error'])): ?>
+            <div class="error"><?= htmlspecialchars($_GET['error']); ?></div>
+        <?php endif; ?>
+
+        <form action="proses_login.php" method="post">
+            <label for="username">Username</label><br>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <input type="submit" value="Masuk">
+        </form>
+
+        <div class="info">
+            Belum punya akun? <a href="form.html">Daftar</a>
+        </div>
+    </div>
+
+</body>
+</html>

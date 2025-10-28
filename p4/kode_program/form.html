@@ -7,14 +7,23 @@
 </head>
 <body>
     <h2> Tambah Data User</h2>
-    <form action="koneksi.php" method="POST">
+    <form action="proses_tambah_user.php" method="POST">
         <label for="username">Username: </label><br>
-        <input type="text" id="username" name="username" required><br>
+        <input type="text" id="username" name="username" required><br><br>
         <label for="email">Email: </label><br>
-        <input type="email" id="email" name="email" required><br>
-        <label for="password">Password: </label>
-        <input type="text" id="password" name="password" required><br>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="role">-- Pilih Role --</label><br>
+        <select name="role" id="role" required onchange="toggleinput()">
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+        </select><br><br>
+        <label for="password">Password: </label><br>
+        <input type="text" id="password" name="password" required><br><br><br>
         <button type="submit">Simpan</button>
     </form>
+    
+        <div class="back-link">
+            <a href="dashboard_admin.php">← Kembali ke Dashboard</a>
+        </div>
 </body>
 </html>
