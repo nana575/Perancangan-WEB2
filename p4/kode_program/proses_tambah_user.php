@@ -7,11 +7,8 @@ $email    = $_POST['email'];
 $role     = $_POST['role'];
 $password = $_POST['password'];
 
-
-$hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
 $query = "INSERT INTO users (username, email, role, password)
-          VALUES ('$username', '$email', '$role', '$hashed_password')";
+          VALUES ('$username', '$email', '$role', '$password')";
 
 if (mysqli_query($koneksi, $query)) {
     echo "<script>
