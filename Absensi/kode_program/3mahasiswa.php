@@ -21,7 +21,7 @@ include "0koneksi.php";
         }
         .sidebar {
             width: 250px;
-            background-color: #0d6efd;
+            background-color: #14243dff;
             color: white;
             padding: 20px;
             height: 100vh;
@@ -123,7 +123,7 @@ include "0koneksi.php";
                                     <td>{$row['email']}</td>
                                     <td><span class='badge bg-success'>Aktif</span></td>
                                     <td class='text-center'>
-                                        <a href='3up_mahasiswa.php?id={$row['id_mahasiswa']}' class='text-warning me-2'>
+                                        <a href='3edit_mahasiswa.php?id={$row['id_mahasiswa']}' class='text-warning me-2'>
                                             <i class='bi bi-pencil-square'></i>
                                         </a>
                                         <a href='3hapus_mahasiswa.php?id={$row['id_mahasiswa']}' class='text-danger' onclick='return confirm(\"Yakin ingin hapus data ini?\")'>
