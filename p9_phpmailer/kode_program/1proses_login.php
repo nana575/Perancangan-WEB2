@@ -65,8 +65,8 @@ if ($user['is_verified'] == 0) {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'cintadewikirana614@gmail.com'; // GANTI
-        $mail->Password   = 'qcrntfxgrlfdsjrn';              // GANTI
+        $mail->Username   = 'emailpengirim@gmail.com'; // GANTI
+        $mail->Password   = 'app_password';              // GANTI
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
@@ -79,7 +79,7 @@ if ($user['is_verified'] == 0) {
         ];
 
         $mail->setFrom(
-            'cintadewikirana614@gmail.com',
+            'emailpengirim@gmail.com',
             'Sistem Absensi'
         );
         $mail->addAddress(
