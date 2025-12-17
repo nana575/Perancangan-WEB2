@@ -1,87 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah data</title>
-    <script>
-        function toggleFields() {
-            const role = document.getElementById("role").value;
-
-            document.getElementById("mahasiswaFields").style.display = (role === "mahasiswa") ? "block" : "none";
-            document.getElementById("dosenFields").style.display = (role === "dosen") ? "block" : "none";
-            document.getElementById("adminFields").style.display = (role === "admin") ? "block" : "none";
-
-            if (role === "mahasiswa"){
-                document.getElementById("mahasiswaFields").style.display = "block";
-                document.getElementById("prodiField").style.display = "block";
-            } else if (role === "dosen"){
-                document.getElementById("dosenFields").style.display = "block";
-                document.getElementById("prodiField").style.display = "block";
-            } else if (role === "admin"){
-                document.getElementById("adminFields").style.display = "block";
-            }
-        }
-
-    </script>
+<meta charset="UTF-8">
+<title>Tambah Data User</title>
+<script>
+function toggleFields(){
+    const role = document.getElementById("role").value;
+    document.getElementById("mahasiswaFields").style.display = (role === "mahasiswa") ? "block" : "none";
+    document.getElementById("prodiField").style.display = (role !== "admin") ? "block" : "none";
+}
+</script>
 </head>
 <body>
-    <form action="2tambah_data.php" method="POST">
-        <h2>Form Tambah Data</h2>
-        <label for="id_user">Id User :</label><br>
-        <input type="text" id="id_user" name="id_user" required><br><br>
 
-        <label for="nama">Nama Lengkap :</label><br>
-        <input type="text" id="nama" name="nama" required><br><br>
+<form action="2tambah_data.php" method="POST">
+<h3>Form Tambah User</h3>
 
-        <label for="email">Email :</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+<label>ID User</label><br>
+<input type="text" name="id_user" required><br><br>
 
-        <label for="role">Role</label><br>
-        <select name="role" id="role" required onchange="toggleFields()">
-            <option value="">-- Pilih Role --</option>
-            <option value="mahasiswa">Mahasiswa</option>
-            <option value="dosen">Dosen</option>
-            <option value="kaprodi">Kaprodi</option>
-            <option value="admin">Admin</option>
-        </select><br><br>
+<label>Nama</label><br>
+<input type="text" name="nama" required><br><br>
 
-         <div id="mahasiswaFields" style="display:none;">
-            <label>ID_ Mahasiswa</label>
-            <input type="text" id="id_mahasiswa" name="id_mahasiswa"><br><br>
+<label>Email</label><br>
+<input type="email" name="email" required><br><br>
 
-            <label>NIM :</label><br>
-            <input type="text" id="NIM" name="nim"><br><br>
+<label>Role</label><br>
+<select name="role" id="role" onchange="toggleFields()" required>
+    <option value="">-- Pilih --</option>
+    <option value="admin">Admin</option>
+    <option value="mahasiswa">Mahasiswa</option>
+    <option value="dosen">Dosen</option>
+</select><br><br>
 
-            <label>Angkatan :</label>
-            <input type="number" id="Angkatan" name="angkatan"><br><br>
+<div id="mahasiswaFields" style="display:none">
+    <label>ID Mahasiswa</label><br>
+    <input type="text" name="id_mahasiswa"><br><br>
 
-            <label>Kelas :</label>
-            <input type="text" id="kelas" name="kelas"><br><br>
-        </div>
+    <label>NIM</label><br>
+    <input type="text" name="nim"><br><br>
 
-        <div id="prodiField">
-            <label>Program Studi :</label>
-            <select name="id_prodi">
-                <option value="PROTI">D3 Teknik Informatika</option>
-                <option value="PROTM">D3 Teknik Mesin</option>
-            </select><br>
-        </div>
+    <label>Angkatan</label><br>
+    <input type="number" name="angkatan"><br><br>
 
-        <label for="username">Username :</label><br>
-        <input type="text" id="username" name="username" required><br><br>
+    <label>Kelas</label><br>
+    <input type="text" name="kelas"><br><br>
+</div>
 
-        <label for="password">Pasword :</label><br>
-        <input type="text" id="password" name="password" required><br><br>
-        
-        <label for="status">Status :</label>
-        <select name="status">
-            <option value="1">Aktif</option>
-            <option value="2">Tidak Aktif</option>
-        </select>
-        <button type="submit">Daftar</button>
-       
-    </form>
+<div id="prodiField" style="display:none">
+    <label>Prodi</label><br>
+    <select name="id_prodi">
+        <option value="PROTI">D3 Teknik Informatika</option>
+        <option value="PROTM">D3 Teknik Mesin</option>
+    </select><br><br>
+</div>
+
+<label>Username</label><br>
+<input type="text" name="username" required><br><br>
+
+<label>Password</label><br>
+<input type="password" name="password" required><br><br>
+
+<label>Status</label><br>
+<select name="status">
+    <option value="1">Aktif</option>
+    <option value="0">Tidak Aktif</option>
+</select><br><br>
+
+<button type="submit">Simpan</button>
+</form>
 
 </body>
 </html>

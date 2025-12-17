@@ -1,0 +1,35 @@
+<svg width="600" height="900" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Lifelines -->
+  <text x="80" y="40" font-size="16">User</text>
+  <line x1="100" y1="60" x2="100" y2="850" stroke="black" stroke-width="2" stroke-dasharray="5"/>
+
+  <text x="250" y="40" font-size="16">Aplikasi</text>
+  <line x1="270" y1="60" x2="270" y2="850" stroke="black" stroke-width="2" stroke-dasharray="5"/>
+
+  <text x="420" y="40" font-size="16">Haar Cascade</text>
+  <line x1="450" y1="60" x2="450" y2="850" stroke="black" stroke-width="2" stroke-dasharray="5"/>
+
+  <!-- Messages -->
+  <line x1="100" y1="120" x2="270" y2="120" stroke="black" stroke-width="2"/>
+  <text x="120" y="110" font-size="14">Buka Aplikasi</text>
+
+  <line x1="100" y1="180" x2="270" y2="180" stroke="black" stroke-width="2"/>
+  <text x="120" y="170" font-size="14">Aktifkan Kamera</text>
+
+  <line x1="270" y1="250" x2="450" y2="250" stroke="black" stroke-width="2"/>
+  <text x="300" y="240" font-size="14">Deteksi Wajah</text>
+
+  <line x1="450" y1="300" x2="270" y2="300" stroke="black" stroke-width="2"/>
+  <text x="310" y="295" font-size="14">Hasil Deteksi Wajah</text>
+
+  <line x1="270" y1="360" x2="450" y2="360" stroke="black" stroke-width="2"/>
+  <text x="300" y="350" font-size="14">Deteksi Senyum</text>
+
+  <line x1="450" y1="420" x2="270" y2="420" stroke="black" stroke-width="2"/>
+  <text x="310" y="415" font-size="14">Hasil Deteksi Senyum</text>
+
+  <line x1="270" y1="480" x2="100" y2="480" stroke="black" stroke-width="2"/>
+  <text x="150" y="470" font-size="14">Tampilkan Output</text>
+
+</svg>

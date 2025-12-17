@@ -1,0 +1,43 @@
+<svg width="500" height="900" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Start -->
+  <circle cx="250" cy="60" r="20" fill="black"/>
+
+  <!-- Start Label -->
+  <text x="215" y="100" font-size="14">Mulai</text>
+
+  <!-- Steps -->
+  <rect x="150" y="120" width="200" height="60" stroke="black" fill="none" stroke-width="2"/>
+  <text x="185" y="155" font-size="14">Buka Aplikasi</text>
+
+  <line x1="250" y1="80" x2="250" y2="120" stroke="black" stroke-width="2"/>
+
+  <rect x="150" y="220" width="200" height="60" stroke="black" fill="none" stroke-width="2"/>
+  <text x="165" y="255" font-size="14">Aktifkan Kamera</text>
+  <line x1="250" y1="180" x2="250" y2="220" stroke="black" stroke-width="2"/>
+
+  <rect x="150" y="320" width="200" height="60" stroke="black" fill="none" stroke-width="2"/>
+  <text x="177" y="355" font-size="14">Deteksi Wajah</text>
+  <line x1="250" y1="280" x2="250" y2="320" stroke="black" stroke-width="2"/>
+
+  <!-- Decision -->
+  <polygon points="250,420 310,460 250,500 190,460" fill="none" stroke="black" stroke-width="2"/>
+  <text x="210" y="465" font-size="14">Wajah Terdeteksi?</text>
+  <line x1="250" y1="380" x2="250" y2="420" stroke="black" stroke-width="2"/>
+
+  <!-- Yes Path -->
+  <rect x="150" y="540" width="200" height="60" stroke="black" fill="none" stroke-width="2"/>
+  <text x="177" y="575" font-size="14">Deteksi Senyum</text>
+  <line x1="250" y1="500" x2="250" y2="540" stroke="black" stroke-width="2"/>
+
+  <!-- No Path -->
+  <text x="320" y="460" font-size="14">Tidak</text>
+
+  <!-- End -->
+  <circle cx="250" cy="650" r="20" fill="black"/>
+  <circle cx="250" cy="650" r="28" fill="none" stroke="black" stroke-width="2"/>
+  <text x="225" y="690" font-size="14">Selesai</text>
+
+  <line x1="250" y1="600" x2="250" y2="630" stroke="black" stroke-width="2"/>
+
+</svg>
