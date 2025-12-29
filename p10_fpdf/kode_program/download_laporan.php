@@ -70,13 +70,13 @@ try {
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'cintadewikirana614@gmail.com';
-    $mail->Password   = 'qcrntfxgrlfdsjrn'; // app password
+    $mail->Username   = 'emailpengirim4@gmail.com';
+    $mail->Password   = 'app_password'; // app password
     $mail->SMTPSecure = 'tls';
     $mail->Port       = 587;
 
-    $mail->setFrom('cintadewikirana614@gmail.com', 'Sistem Akademik');
-    $mail->addAddress('masihidup23@gmail.com');
+    $mail->setFrom('emailpengirim@gmail.com', 'Sistem Akademik');
+    $mail->addAddress('emailpenerima@gmail.com');
 
     $mail->Subject = 'Laporan Data Mahasiswa (PDF)';
     $mail->Body    = 'Terlampir laporan data mahasiswa dalam format PDF.';
