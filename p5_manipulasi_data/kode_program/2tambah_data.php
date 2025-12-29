@@ -297,6 +297,7 @@
             $role = $_POST['role'];
             $username = $_POST['username']; 
             $password = $_POST['password'];
+            $password_hash  = password_hash($password_plain, PASSWORD_DEFAULT);
             $status = $_POST['status'];
 
             // Insert ke tabel user

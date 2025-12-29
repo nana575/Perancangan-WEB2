@@ -1,5 +1,5 @@
 <?php
-include "0koneksi.php";
+include "../0koneksi.php";
 
 // Cek apakah ada parameter id_mahasiswa dari URL
 if (isset($_GET['id'])) {
